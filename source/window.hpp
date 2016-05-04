@@ -17,7 +17,7 @@ public:
   enum MouseButton
   {
     MOUSE_BUTTON_NONE   = 0,
-    MOUSE_BUTTON_LEFT   = (1 << 0),
+    MOUSE_BUTTON_LEFT   = (1 << 0),   
     MOUSE_BUTTON_RIGHT  = (1 << 1),
     MOUSE_BUTTON_MIDDLE = (1 << 2)
   };
