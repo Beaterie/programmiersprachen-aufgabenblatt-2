@@ -43,6 +43,51 @@ TEST_CASE("test_of_vektordivision", "[/=]"){
 	REQUIRE(vc2.y == Approx(4.0));
 }
 
+TEST_CASE("test_of_Addition", "[+]"){
+	Vec2 vc1(2.0,4.0);
+	Vec2 vc2(5.0,6.0);
+	Vec2 vc3;
+	vc3 = vc1 + vc2;
+	REQUIRE(vc3.x == Approx(7.0));
+	REQUIRE(vc3.y == Approx(10.0));
+}
+
+TEST_CASE("test_of_Subtraktion", "[-]"){
+	Vec2 vc1(2.0,4.0);
+	Vec2 vc2(5.0,6.0);
+	Vec2 vc3;
+	vc3 = vc1 - vc2;
+	REQUIRE(vc3.x == Approx(-3.0));
+	REQUIRE(vc3.y == Approx(-2.0));
+}
+
+TEST_CASE("test_of_Multiplikation1", "[*1]"){
+	Vec2 vc1(2.0,4.0);
+	Vec2 vc3;
+	vc3 = vc1 * 3.0f;
+	REQUIRE(vc3.x == Approx(6.0));
+	REQUIRE(vc3.y == Approx(12.0));
+}
+
+TEST_CASE("test_of_Multiplikation2", "[*2]"){
+	Vec2 vc1(2.0,4.0);
+	Vec2 vc3;
+	vc3 = 3.0f * vc1;
+	REQUIRE(vc3.x == Approx(6.0));
+	REQUIRE(vc3.y == Approx(12.0));
+}
+
+TEST_CASE("test_of_Division", "[/]"){
+	Vec2 vc1(2.0,4.0);
+	Vec2 vc3;
+	vc3 = vc1 / 3.0f;
+	REQUIRE(vc3.x == Approx(0.66667f));
+	REQUIRE(vc3.y == Approx(1.33334f));
+	vc3 = vc1 / 0.0f;
+	REQUIRE(vc3.x == Approx(0));
+	REQUIRE(vc3.y == Approx(0));
+}
+
 
 int main(int argc, char *argv[])
 {
