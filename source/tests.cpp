@@ -102,17 +102,26 @@ TEST_CASE("text_of_Matrix2", "[Matrix2]"){
 	REQUIRE(m2.d == 7);
 }
 
-/*
 TEST_CASE("test_of_Matrix2_Mulitplikation", "Matrix2_Multiplikation"){
-	Mat2 matrixone(1.0,1.0,2.0,2.0);
+	Mat2 matrixone(2.0,1.0,2.0,2.0);
 	Mat2 matrixtwo(2.0,3.0,4.0,5.0);
 	matrixone *= matrixtwo;
-	REQUIRE(matrixone.a == Approx(6.0));
-	REQUIRE(matrixone.b == Approx(8.0));
+	REQUIRE(matrixone.a == Approx(8.0));
+	REQUIRE(matrixone.b == Approx(11.0));
 	REQUIRE(matrixone.c == Approx(12.0));
 	REQUIRE(matrixone.d == Approx(16.0));
-}*/
+}
 
+TEST_CASE("test_of_Matrix2_Mulitplikation_const", "Matrix2_Multiplikation_const"){
+	Mat2 matrixone(2.0,1.0,2.0,2.0);
+	Mat2 matrixtwo(2.0,3.0,4.0,5.0);
+	Mat2 matrixthree{};
+	matrixthree = matrixone * matrixtwo;
+	REQUIRE(matrixthree.a == Approx(8.0));
+	REQUIRE(matrixthree.b == Approx(11.0));
+	REQUIRE(matrixthree.c == Approx(12.0));
+	REQUIRE(matrixthree.d == Approx(16.0));
+}
 
 
 int main(int argc, char *argv[])
