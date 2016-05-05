@@ -229,6 +229,8 @@ assert.h
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/Mat2.hpp
 vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
+math.h
+-
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/Vec2.hpp
 
@@ -239,13 +241,19 @@ vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
 iostream
 -
+math.h
+-
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/mat2.hpp
 vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
+math.h
+-
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/tests.cpp
 catch.hpp
+-
+math.h
 -
 Vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/Vec2.hpp

@@ -1,5 +1,6 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
+#include <math.h>
 #include "Vec2.hpp"
 #include "Mat2.hpp"
 
@@ -121,6 +122,53 @@ TEST_CASE("test_of_Matrix2_Mulitplikation_const", "Matrix2_Multiplikation_const"
 	REQUIRE(matrixthree.b == Approx(11.0));
 	REQUIRE(matrixthree.c == Approx(12.0));
 	REQUIRE(matrixthree.d == Approx(16.0));
+}
+
+TEST_CASE("test_of_Matrix-Vektor_Mulitplikation", "Matrix*Vektor"){
+	Mat2 m(5.0,6.0,7.0,8.0);
+	Vec2 v1(2.0,3.0);
+	Vec2 v2{};
+	v2 = m * v1;
+	REQUIRE(v2.x == Approx(28.0));
+	REQUIRE(v2.y == Approx(38.0));
+	Vec2 v3{};
+	v3 = v1 * m;
+	REQUIRE(v3.x == Approx(0));
+	REQUIRE(v3.y == Approx(0));
+}
+
+TEST_CASE("test_of_determinante", "det"){
+	Mat2 m(5.0,6.0,7.0,8.0);
+	float t = m.det();
+	REQUIRE(t == Approx(-2));
+}
+
+TEST_CASE("test_of_inverse_Matrix", "inverse_Matrix"){
+	Mat2 m(2.0,2.0,3.0,4.0);
+	float t = m.det();
+	REQUIRE(t == Approx(2.0));
+	Mat2 n = inverse(m);
+	REQUIRE(n.a == Approx(2.0));
+	REQUIRE(n.b == Approx(-1.0));
+	REQUIRE(n.c == Approx(-1.5));
+	REQUIRE(n.d == Approx(1.0));
+}
+
+TEST_CASE("test_of_transposed_Matrix", "transposed_Matrix"){
+	Mat2 m(2.0,3.0,4.0,5.0);
+	Mat2 n = transpose(m);
+	REQUIRE(n.a == Approx(2.0));
+	REQUIRE(n.b == Approx(4.0));
+	REQUIRE(n.c == Approx(3.0));
+	REQUIRE(n.d == Approx(5.0));
+}
+
+TEST_CASE("test_of_rotate_matrix", "rotate_matrix"){
+	Mat2 n = make_rotation_mat2(90);
+	REQUIRE(n.a == Approx(cos (90)));
+	REQUIRE(n.b == Approx(-sin (90)));
+	REQUIRE(n.c == Approx(sin (90)));
+	REQUIRE(n.d == Approx(cos (90)));
 }
 
 
