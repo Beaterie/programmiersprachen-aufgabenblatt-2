@@ -3,6 +3,8 @@
 #include <math.h>
 #include "Vec2.hpp"
 #include "Mat2.hpp"
+#include "color.hpp"
+#include "circle.hpp"
 
 TEST_CASE("test_of_Vektor", "[Vec2]"){
 	Vec2 vc1{};
@@ -169,6 +171,42 @@ TEST_CASE("test_of_rotate_matrix", "rotate_matrix"){
 	REQUIRE(n.b == Approx(-sin (90)));
 	REQUIRE(n.c == Approx(sin (90)));
 	REQUIRE(n.d == Approx(cos (90)));
+}
+
+TEST_CASE("test_of_color", "color"){
+	Color def{};
+	Color black{0.0};
+	Color red{1.0, 0.0, 0.0};
+	REQUIRE(black.r == Approx(0.0));
+	REQUIRE(black.g == Approx(0.0));
+	REQUIRE(black.b == Approx(0.0));
+	REQUIRE(red.r == Approx(1.0));
+	REQUIRE(red.g == Approx(0.0));
+	REQUIRE(red.b == Approx(0.0));
+	REQUIRE(def.r == Approx(0.0));
+	REQUIRE(def.g == Approx(0.0));
+	REQUIRE(def.b == Approx(0.0));
+	/*Color mistake{2.0, -0.4, 1.01};
+	REQUIRE(mistake.r == Approx(2.0));
+	REQUIRE(mistake.g == Approx(-0.4));
+	REQUIRE(mistake.b == Approx(1.01));*/
+}
+
+TEST_CASE("text_of_circle", "circle"){
+	Circle eins{};
+	Circle drei{{5.0, 4.0}, 1.0, {0.5,0.4,0.3}};
+	REQUIRE(eins.ctr.x == Approx(0));
+	REQUIRE(eins.ctr.y == Approx(0));
+	REQUIRE(eins.radius == Approx(0));
+	REQUIRE(eins.clr.r == Approx(0));
+	REQUIRE(eins.clr.g == Approx(0));
+	REQUIRE(eins.clr.b == Approx(0));
+	REQUIRE(drei.ctr.x == Approx(5.0));
+	REQUIRE(drei.ctr.y == Approx(4.0));
+	REQUIRE(drei.radius == Approx(1.0));
+	REQUIRE(drei.clr.r == Approx(0.5));
+	REQUIRE(drei.clr.g == Approx(0.4));
+	REQUIRE(drei.clr.b == Approx(0.3));
 }
 
 
