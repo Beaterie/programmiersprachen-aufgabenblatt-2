@@ -157,12 +157,12 @@ TEST_CASE("test_of_inverse_Matrix", "inverse_Matrix"){
 }
 
 TEST_CASE("test_of_transposed_Matrix", "transposed_Matrix"){
-	Mat2 m(2.0,3.0,4.0,5.0);
+	Mat2 m(2.0,3.0,4.0,-5.0);
 	Mat2 n = transpose(m);
 	REQUIRE(n.a == Approx(2.0));
 	REQUIRE(n.b == Approx(4.0));
 	REQUIRE(n.c == Approx(3.0));
-	REQUIRE(n.d == Approx(5.0));
+	REQUIRE(n.d == Approx(-5.0));
 }
 
 TEST_CASE("test_of_rotate_matrix", "rotate_matrix"){
@@ -192,9 +192,9 @@ TEST_CASE("test_of_color", "color"){
 	REQUIRE(mistake.b == Approx(1.01));*/
 }
 
-TEST_CASE("text_of_circle", "circle"){
+TEST_CASE("test_of_circle", "circle"){
 	Circle eins{};
-	Circle drei{{5.0, 4.0}, 1.0, {0.5,0.4,0.3}};
+	Circle drei{{5.0, 4.0}, 1.0, {0.5, 0.4, 0.3}};
 	REQUIRE(eins.ctr.x == Approx(0));
 	REQUIRE(eins.ctr.y == Approx(0));
 	REQUIRE(eins.radius == Approx(0));
@@ -207,6 +207,16 @@ TEST_CASE("text_of_circle", "circle"){
 	REQUIRE(drei.clr.r == Approx(0.5));
 	REQUIRE(drei.clr.g == Approx(0.4));
 	REQUIRE(drei.clr.b == Approx(0.3));
+}
+
+TEST_CASE("test_of_circle_getter", "c-getter"){
+	Circle eins{{6.0, 7.0}, 2.0, {0.3, 0.4, 0}};
+	REQUIRE(eins.get_diameter() == Approx(4.0));
+	REQUIRE(eins.get_area() == Approx(2 * 2 * M_PI));
+	REQUIRE(eins.get_circumference() == Approx(2 * M_PI * 2.0));
+	REQUIRE(eins.get_radius() == Approx(2.0));
+	eins.set_radius(7.0);
+	REQUIRE(eins.get_radius() == Approx(7.0));
 }
 
 
