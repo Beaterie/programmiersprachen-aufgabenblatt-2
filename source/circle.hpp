@@ -21,10 +21,4 @@ public:
 	Color clr; //Farbe 
 };
 
-
-/*Circle operator-(Circle const& u, Circle const& v);
-Circle operator*(Circle const& v, float s);
-Circle operator/(Circle const& v, float s);
-Circle operator*(float s, Circle const& v);
-*/
 #endif // CIRCLE_HPP

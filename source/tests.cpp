@@ -5,6 +5,7 @@
 #include "Mat2.hpp"
 #include "color.hpp"
 #include "circle.hpp"
+#include "rectangle.hpp"
 
 TEST_CASE("test_of_Vektor", "[Vec2]"){
 	Vec2 vc1{};
@@ -197,7 +198,7 @@ TEST_CASE("test_of_circle", "circle"){
 	Circle drei{{5.0, 4.0}, 1.0, {0.5, 0.4, 0.3}};
 	REQUIRE(eins.ctr.x == Approx(0));
 	REQUIRE(eins.ctr.y == Approx(0));
-	REQUIRE(eins.radius == Approx(0));
+	REQUIRE(eins.radius == Approx(1));
 	REQUIRE(eins.clr.r == Approx(0));
 	REQUIRE(eins.clr.g == Approx(0));
 	REQUIRE(eins.clr.b == Approx(0));
@@ -213,11 +214,43 @@ TEST_CASE("test_of_circle_getter", "c-getter"){
 	Circle eins{{6.0, 7.0}, 2.0, {0.3, 0.4, 0}};
 	REQUIRE(eins.get_diameter() == Approx(4.0));
 	REQUIRE(eins.get_area() == Approx(2 * 2 * M_PI));
-	REQUIRE(eins.get_circumference() == Approx(2 * M_PI * 2.0));
+	REQUIRE(eins.get_circumference() == Approx(2 * M_PI * 2));
 	REQUIRE(eins.get_radius() == Approx(2.0));
 	eins.set_radius(7.0);
 	REQUIRE(eins.get_radius() == Approx(7.0));
 }
+
+TEST_CASE("test_of_rectangle", "rectangle"){
+	Rectangle eins{};
+	REQUIRE(eins.vertex.x == Approx(0));
+	REQUIRE(eins.vertex.y == Approx(0));
+	REQUIRE(eins.height == Approx(1));
+	REQUIRE(eins.width == Approx(1));
+	REQUIRE(eins.clr.r == Approx(0));
+	REQUIRE(eins.clr.g == Approx(0));
+	REQUIRE(eins.clr.b == Approx(0));
+	Rectangle zwei{{0,0},3,2.5,{0.3}};
+	REQUIRE(zwei.vertex.x == Approx(0));
+	REQUIRE(zwei.vertex.y == Approx(0));
+	REQUIRE(zwei.height == Approx(3));
+	REQUIRE(zwei.width == Approx(2.5));
+	REQUIRE(zwei.clr.r == Approx(0.3));
+	REQUIRE(zwei.clr.g == Approx(0.3));
+	REQUIRE(zwei.clr.b == Approx(0.3));
+}
+
+TEST_CASE("test_of_rectangle_getter", "r-getter"){
+	Rectangle eins{{1.5,2.5},4,3,{0}};
+	REQUIRE(eins.get_height() == Approx(4));
+	REQUIRE(eins.get_width() == Approx(3));
+	REQUIRE(eins.get_area() == Approx(12));
+	REQUIRE(eins.get_circumference() == Approx(14));
+	eins.set_height(5);
+	eins.set_width(7);
+	REQUIRE(eins.get_height() == Approx(5));
+	REQUIRE(eins.get_width() == Approx(7));
+}
+
 
 
 int main(int argc, char *argv[])

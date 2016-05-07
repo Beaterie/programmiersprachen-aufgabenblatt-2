@@ -10,11 +10,17 @@ source/CMakeFiles/tests.dir/mat2.cpp.o: ../source/mat2.cpp
 source/CMakeFiles/tests.dir/mat2.cpp.o: ../source/mat2.hpp
 source/CMakeFiles/tests.dir/mat2.cpp.o: ../source/vec2.hpp
 
+source/CMakeFiles/tests.dir/rectangle.cpp.o: ../source/color.hpp
+source/CMakeFiles/tests.dir/rectangle.cpp.o: ../source/rectangle.cpp
+source/CMakeFiles/tests.dir/rectangle.cpp.o: ../source/rectangle.hpp
+source/CMakeFiles/tests.dir/rectangle.cpp.o: ../source/vec2.hpp
+
 source/CMakeFiles/tests.dir/tests.cpp.o: ../external/catch-1.1/catch.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/Mat2.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/Vec2.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/circle.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/color.hpp
+source/CMakeFiles/tests.dir/tests.cpp.o: ../source/rectangle.hpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/tests.cpp
 source/CMakeFiles/tests.dir/tests.cpp.o: ../source/vec2.hpp
 

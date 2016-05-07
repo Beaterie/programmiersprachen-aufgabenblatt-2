@@ -20,6 +20,11 @@ source/CMakeFiles/example.dir/mat2.cpp.o: ../source/mat2.cpp
 source/CMakeFiles/example.dir/mat2.cpp.o: ../source/mat2.hpp
 source/CMakeFiles/example.dir/mat2.cpp.o: ../source/vec2.hpp
 
+source/CMakeFiles/example.dir/rectangle.cpp.o: ../source/color.hpp
+source/CMakeFiles/example.dir/rectangle.cpp.o: ../source/rectangle.cpp
+source/CMakeFiles/example.dir/rectangle.cpp.o: ../source/rectangle.hpp
+source/CMakeFiles/example.dir/rectangle.cpp.o: ../source/vec2.hpp
+
 source/CMakeFiles/example.dir/vec2.cpp.o: ../source/vec2.cpp
 source/CMakeFiles/example.dir/vec2.cpp.o: ../source/vec2.hpp
 

@@ -7,7 +7,7 @@
 //default
 Circle::Circle():
 	ctr{},
-	radius{},
+	radius{1},
 	clr{}
 	{}
 
