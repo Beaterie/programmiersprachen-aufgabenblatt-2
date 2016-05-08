@@ -1,16 +1,53 @@
 #include "window.hpp"
 #include <utility>
 #include <cmath>
+#include <vector>
+
+#include "rectangle.hpp"
+#include "vec2.hpp"
+#include "mat2.hpp"
+#include "circle.hpp"
+#include "color.hpp"
 
 int main(int argc, char* argv[])
 {
   Window win{std::make_pair(600,600)};
+
+  /* Rectangle peter{Vec2{0.5,0.5}, 0.5, 0.5, Color{}};
+  Circle paul{Vec2{0.3,0.5}, 0.3, Color{0,1,0.3}};
+  Rectangle pan{Vec2{0.4,0.4}, -0.3, -0.3, Color{}};
+  Circle klee{Vec2{0.5,0.5}, 0.2, Color{0,1,0.3}}; */
+
+  std::vector<Rectangle> Rechteck;
+  Rechteck.push_back(Rectangle(Vec2{0.5,0.5}, 0.5, 0.5, Color{1,0,0.5}));
+
+  std::vector<Circle> Kreis;
+  Kreis.push_back(Circle(Vec2{0.3,0.5}, 0.3, Color{0,1,0.3}));
+
 
   while (!win.should_close()) {
     if (win.is_key_pressed(GLFW_KEY_ESCAPE)) {
       win.close();
     }
 
+    Vec2 mouse = Vec2(win.mouse_position().first/0.5f,win.mouse_position().second/0.5f);
+    if(Rechteck[0].is_inside(mouse)){
+        Rechteck[0].draw(win,Color{0,0,1});
+    }
+    else{
+        Rechteck[0].draw(win);    
+    }
+    if(Kreis[0].is_inside(mouse)){
+        Kreis[0].draw(win, {0,0,1});
+    }
+    else{
+        Kreis[0].draw(win);
+    }
+
+    /*
+    std::vector<Rectangle> Rechteck;
+    Rechteck.push_back(Rectangle(Vec2{0.5,0.5}, 1, 2, Color{1.0,0.5,0.0}));
+    
     auto t = win.get_time();
     float x1{0.5f + 0.5f * std::sin(t)};
     float y1{0.5f + 0.5f * std::cos(t)};
@@ -33,7 +70,7 @@ int main(int argc, char* argv[])
 
     win.draw_line(m.first, 0.0f, m.first, 0.01f, 0.0, 0.0, 0.0);
     win.draw_line(m.first, 0.99f,m.first, 1.0f, 0.0, 0.0, 0.0);
-
+    */
     win.update();
   }
 

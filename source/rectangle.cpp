@@ -27,29 +27,32 @@ Rectangle::Rectangle(Vec2 vertex, float height, float width, Color clr):
 		}
 	}
 
-
-/*void Circle::draw() const{
-
-}*/
-
 //Höhe
 float Rectangle::get_height() const{
-	if (height < 0){
-		return height*(-1);
-	}
-	else{
-		return height;
-	}
+	return height;
 }
 
 //Breite
 float Rectangle::get_width() const{
-	if (width < 0){
-		return width*(-1);
-	}
-	else{
-		return width;
-	}
+	return width;
+}
+
+//Stützvektor
+Vec2 Rectangle::get_vertex() const{
+	return vertex;
+}
+
+//Farbwert für r
+float Rectangle::get_color_r() const{
+	return clr.r;
+}
+//Farbwert für g
+float Rectangle::get_color_g() const{
+	return clr.g;
+}
+//Farbwert für b
+float Rectangle::get_color_b() const{
+	return clr.b;
 }
 
 //Flächeninhalt
@@ -111,5 +114,69 @@ float Rectangle::set_width(float new_width){
 	else{
 		width = new_width;
 		return new_width;
+	}
+}
+
+//Rechteck zeichnen
+void Rectangle::draw(Window const& win){
+    win.draw_line(get_vertex().x, get_vertex().y, get_vertex().x + get_width(), get_vertex().y, get_color_r(), get_color_g(), get_color_b());
+    win.draw_line(get_vertex().x, get_vertex().y, get_vertex().x, get_vertex().y + get_height(), get_color_r(), get_color_g(), get_color_b());
+    win.draw_line(get_vertex().x, get_vertex().y + get_height(), get_vertex().x + get_width(), get_vertex().y + get_height(), get_color_r(), get_color_g(), get_color_b());
+    win.draw_line(get_vertex().x + get_width(), get_vertex().y, get_vertex().x + get_width(), get_vertex().y + get_height(), get_color_r(), get_color_g(), get_color_b());
+}
+
+//Rechteck zeichnen mit Extrafarbe
+void Rectangle::draw(Window const& win, Color const& clr){
+    win.draw_line(get_vertex().x, get_vertex().y, get_vertex().x + get_width(), get_vertex().y, clr.r, clr.g, clr.b);
+    win.draw_line(get_vertex().x, get_vertex().y, get_vertex().x, get_vertex().y + get_height(), clr.r, clr.g, clr.b);
+    win.draw_line(get_vertex().x, get_vertex().y + get_height(), get_vertex().x + get_width(), get_vertex().y + get_height(), clr.r, clr.g, clr.b);
+    win.draw_line(get_vertex().x + get_width(), get_vertex().y, get_vertex().x + get_width(), get_vertex().y + get_height(), clr.r, clr.g, clr.b);
+}
+
+//Test ob Punkt im Rechteck liegt
+bool Rectangle::is_inside(Vec2 const& point){
+	if (get_height() > 0 && get_width() > 0){
+		if (point.x < get_vertex().x || point.x > (get_vertex().x + get_width())){
+			return false;
+		}
+		if (point.y < get_vertex().y || point.y > (get_vertex().y + get_height())){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	if (get_height() > 0 && get_width() < 0){
+		if (point.x < (get_vertex().x  + get_width()) || point.x > get_vertex().x){
+			return false;
+		}
+		if (point.y < get_vertex().y || point.y > (get_vertex().y + get_height())){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	if (get_height() < 0 && get_width() > 0){
+		if (point.x < get_vertex().x || point.x > (get_vertex().x + get_width())){
+			return false;
+		}
+		if (point.y < (get_vertex().y + get_height()) || point.y > get_vertex().y){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	else{
+		if (point.x < (get_vertex().x + get_width()) || point.x > get_vertex().x){
+			return false;
+		}
+		if (point.y < (get_vertex().y + get_height()) || point.y > get_vertex().y){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 }

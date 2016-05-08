@@ -1,5 +1,6 @@
 #include "vec2.hpp"
 #include <iostream>
+#include <math.h>
 
 //Standardwerte für Vektor
 Vec2::Vec2():
@@ -92,4 +93,9 @@ Vec2 operator*(float s, Vec2 const& u){
 	w.x = u.x * s;
 	w.y = u.y * s;
 	return w;
+}
+
+//Distanz zwischen zwei Punkten über deren Vektoren
+float distance(Vec2 const& u, Vec2 const& v){
+	return sqrt((u.x-v.x)*(u.x-v.x) + (u.y-v.y)*(u.y-v.y));
 }

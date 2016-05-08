@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../external/GL/glew.h
+stddef.h
+-
+inttypes.h
+-
+stdint.h
+-
+inttypes.h
+-
+OpenGL/glu.h
+-
+GL/glu.h
+-
+
 ../external/catch-1.1/catch.hpp
 sstream
 -
@@ -226,6 +240,28 @@ vector
 assert.h
 -
 
+../external/glfw-3.0.3/include/GLFW/glfw3.h
+stddef.h
+-
+OpenGL/gl3.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/glcorearb.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+GLES3/gl3.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/Mat2.hpp
 vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
@@ -233,6 +269,8 @@ math.h
 -
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/Vec2.hpp
+math.h
+-
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/circle.cpp
 circle.hpp
@@ -245,6 +283,10 @@ math.h
 -
 color.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/color.hpp
+window.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
+mat2.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/mat2.hpp
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/circle.hpp
 vec2.hpp
@@ -253,6 +295,8 @@ math.h
 -
 color.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/color.hpp
+window.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/color.hpp
 iostream
@@ -293,6 +337,8 @@ math.h
 -
 color.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/color.hpp
+window.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/tests.cpp
 catch.hpp
@@ -309,12 +355,42 @@ circle.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/circle.hpp
 rectangle.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/rectangle.hpp
+window.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.cpp
 vec2.hpp
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
 iostream
 -
+math.h
+-
 
 /Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/vec2.hpp
+math.h
+-
+
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.cpp
+window.hpp
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
+utility
+-
+cstring
+-
+iostream
+-
+cassert
+-
+
+/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/source/window.hpp
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+utility
+-
+array
+-
+string
+-
 

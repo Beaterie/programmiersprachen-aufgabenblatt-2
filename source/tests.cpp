@@ -6,6 +6,7 @@
 #include "color.hpp"
 #include "circle.hpp"
 #include "rectangle.hpp"
+#include "window.hpp"
 
 TEST_CASE("test_of_Vektor", "[Vec2]"){
 	Vec2 vc1{};
@@ -255,7 +256,21 @@ TEST_CASE("test_of_rectangle_getter", "r-getter"){
 	REQUIRE(eins.get_height() == Approx(5));
 }
 
-
+TEST_CASE("test_of_point_in_circle/rectangle", "Is inside?"){
+	Rectangle peter{Vec2{0.5,0.5}, 0.5, 0.5, Color{}};
+	Circle paul{Vec2{0.3,0.5}, 0.3, Color{0,1,0.3}};
+	Rectangle pan{Vec2{0.4,0.4}, -0.3, -0.3, Color{}};
+	Circle klee{Vec2{0.5,0.5}, 0.2, Color{0,1,0.3}};
+	REQUIRE(peter.is_inside(Vec2{0.6,0.6}) == true);
+	REQUIRE(peter.is_inside(Vec2{0.5,0.5}) == true);
+	REQUIRE(peter.is_inside(Vec2{0.4,0.5}) == false);
+	REQUIRE(pan.is_inside(Vec2{0.1,0.3}) == true);
+	REQUIRE(pan.is_inside(Vec2{0.2,0.2}) == true);
+	REQUIRE(pan.is_inside(Vec2{0.6,0.6}) == false);
+	REQUIRE(klee.is_inside(Vec2{0.7,0.5}) == true);
+	REQUIRE(klee.is_inside(Vec2{0.6,0.6}) == true);
+	REQUIRE(klee.is_inside(Vec2{0.1,0.1}) == false);
+}
 
 int main(int argc, char *argv[])
 {
