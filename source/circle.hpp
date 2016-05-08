@@ -7,23 +7,23 @@
 // Circle class definition
 class Circle{
 public:
-	Circle();
-	Circle(Vec2 ctr, float radius, Color clr);
+	Circle();	//default-Konstruktor
+	Circle(Vec2 ctr, float radius, Color clr);	//Konstruktor mit allen Eingabeparametern
 
-	/*void draw() const;*/
-	float get_diameter() const;
-	float get_area() const; 
-	float get_circumference() const;
-	float set_radius(float newradius); 
-	float get_radius() const;
-	Vec2 get_center() const;
-	float get_color_r() const;
-	float get_color_g() const;
-	float get_color_b() const;
+	float get_diameter() const;				//Rückgabe Durchmesser
+	float get_area() const;					//Rückgabe Flächeninhalt
+	float get_circumference() const;		//Rückgabe Umfang
+	float set_radius(float newradius);		//Eingabe neuer Radius
+	float get_radius() const;				//Rückgabe Radius
+	Vec2 get_center() const;				//Rückgabe Mittelpunkt
+	float get_color_r() const;				//Farb-Getter r
+	float get_color_g() const;				//Farb-Getter g
+	float get_color_b() const;				//Farb-Getter b
 
-	void draw(Window const& win);
-    void draw(Window const& win, Color const& clr);
-    bool is_inside(Vec2 const& point); 
+	void draw(Window const& win);			//Kreiszeichnung
+    void draw(Window const& win, Color const& clr);	//Kreiszeichnung mit zusätzlicher Farbangabe
+    bool is_inside(Vec2 const& point);		//Überprüfung ob Punkt in Kreis liegt
+    void draw_clock_face(Window const& win);	//Zechnung Ziffernblatt
 
 	Vec2 ctr; //Mittelpunkt durch Vektor
 	float radius; //Radius

@@ -7,23 +7,23 @@
 // Rectangle class definition
 class Rectangle{
 public:
-	Rectangle();
-	Rectangle(Vec2 vertex, float height, float width, Color clr);
+	Rectangle();	//default-Konstruktor
+	Rectangle(Vec2 vertex, float height, float width, Color clr);	//Kontruktor mit allen Eingabeparametern
 
-	float get_height() const;
-	float get_width() const;
-	Vec2 get_vertex() const;
-	float get_color_r() const;
-	float get_color_g() const;
-	float get_color_b() const;
-	float get_area() const;
-	float get_circumference() const;
-	float set_height(float new_height);
-	float set_width(float new_width);
+	float get_height() const;			//Rückgabe Höhe
+	float get_width() const;			//Rückgabe Breite
+	Vec2 get_vertex() const;			//Rückgabe Eckpunkt
+	float get_color_r() const;			//Farb-Getter r
+	float get_color_g() const;			//Farb-Getter g
+	float get_color_b() const;			//Farb-Getter b
+	float get_area() const;				//Rückgabe Flächeninhalt
+	float get_circumference() const;	//Rückgabe Umfang
+	float set_height(float new_height);	//Eingabe neuer Höhe
+	float set_width(float new_width);	//Eingabe neuer Breite
 
-	void draw(Window const& win);
-	void draw(Window const& win, Color const& clr);
-	bool is_inside(Vec2 const& point);
+	void draw(Window const& win);		//Rechteckzeichnung
+	void draw(Window const& win, Color const& clr);	//Rechteckzeichnung mit Farbangabe
+	bool is_inside(Vec2 const& point);	//Überprüfung ob Punkt in Rechteck liegt
 
 	Vec2 vertex; //Eckpunkt (Stützvektor)
 	float height; //Höhe

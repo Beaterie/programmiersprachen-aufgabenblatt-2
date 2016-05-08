@@ -140,6 +140,48 @@ tests/fast:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
+# Convenience name for target.
+source/CMakeFiles/analoguhr.dir/rule:
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/analoguhr.dir/rule
+.PHONY : source/CMakeFiles/analoguhr.dir/rule
+
+# Convenience name for target.
+analoguhr: source/CMakeFiles/analoguhr.dir/rule
+
+.PHONY : analoguhr
+
+# fast build rule for target.
+analoguhr/fast:
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/build
+.PHONY : analoguhr/fast
+
+analoguhr.o: analoguhr.cpp.o
+
+.PHONY : analoguhr.o
+
+# target to build an object file
+analoguhr.cpp.o:
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/analoguhr.cpp.o
+.PHONY : analoguhr.cpp.o
+
+analoguhr.i: analoguhr.cpp.i
+
+.PHONY : analoguhr.i
+
+# target to preprocess a source file
+analoguhr.cpp.i:
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/analoguhr.cpp.i
+.PHONY : analoguhr.cpp.i
+
+analoguhr.s: analoguhr.cpp.s
+
+.PHONY : analoguhr.s
+
+# target to generate assembly for a file
+analoguhr.cpp.s:
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/analoguhr.cpp.s
+.PHONY : analoguhr.cpp.s
+
 circle.o: circle.cpp.o
 
 .PHONY : circle.o
@@ -148,6 +190,7 @@ circle.o: circle.cpp.o
 circle.cpp.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/circle.cpp.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/circle.cpp.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/circle.cpp.o
 .PHONY : circle.cpp.o
 
 circle.i: circle.cpp.i
@@ -158,6 +201,7 @@ circle.i: circle.cpp.i
 circle.cpp.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/circle.cpp.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/circle.cpp.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/circle.cpp.i
 .PHONY : circle.cpp.i
 
 circle.s: circle.cpp.s
@@ -168,6 +212,7 @@ circle.s: circle.cpp.s
 circle.cpp.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/circle.cpp.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/circle.cpp.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/circle.cpp.s
 .PHONY : circle.cpp.s
 
 example.o: example.cpp.o
@@ -205,6 +250,7 @@ glew.o: glew.c.o
 glew.c.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/glew.c.o
 .PHONY : glew.c.o
 
 glew.i: glew.c.i
@@ -215,6 +261,7 @@ glew.i: glew.c.i
 glew.c.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/glew.c.i
 .PHONY : glew.c.i
 
 glew.s: glew.c.s
@@ -225,6 +272,7 @@ glew.s: glew.c.s
 glew.c.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/glew.c.s
 .PHONY : glew.c.s
 
 mat2.o: mat2.cpp.o
@@ -235,6 +283,7 @@ mat2.o: mat2.cpp.o
 mat2.cpp.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/mat2.cpp.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/mat2.cpp.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/mat2.cpp.o
 .PHONY : mat2.cpp.o
 
 mat2.i: mat2.cpp.i
@@ -245,6 +294,7 @@ mat2.i: mat2.cpp.i
 mat2.cpp.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/mat2.cpp.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/mat2.cpp.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/mat2.cpp.i
 .PHONY : mat2.cpp.i
 
 mat2.s: mat2.cpp.s
@@ -255,6 +305,7 @@ mat2.s: mat2.cpp.s
 mat2.cpp.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/mat2.cpp.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/mat2.cpp.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/mat2.cpp.s
 .PHONY : mat2.cpp.s
 
 rectangle.o: rectangle.cpp.o
@@ -265,6 +316,7 @@ rectangle.o: rectangle.cpp.o
 rectangle.cpp.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/rectangle.cpp.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/rectangle.cpp.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/rectangle.cpp.o
 .PHONY : rectangle.cpp.o
 
 rectangle.i: rectangle.cpp.i
@@ -275,6 +327,7 @@ rectangle.i: rectangle.cpp.i
 rectangle.cpp.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/rectangle.cpp.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/rectangle.cpp.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/rectangle.cpp.i
 .PHONY : rectangle.cpp.i
 
 rectangle.s: rectangle.cpp.s
@@ -285,6 +338,7 @@ rectangle.s: rectangle.cpp.s
 rectangle.cpp.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/rectangle.cpp.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/rectangle.cpp.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/rectangle.cpp.s
 .PHONY : rectangle.cpp.s
 
 tests.o: tests.cpp.o
@@ -322,6 +376,7 @@ vec2.o: vec2.cpp.o
 vec2.cpp.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/vec2.cpp.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/vec2.cpp.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/vec2.cpp.o
 .PHONY : vec2.cpp.o
 
 vec2.i: vec2.cpp.i
@@ -332,6 +387,7 @@ vec2.i: vec2.cpp.i
 vec2.cpp.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/vec2.cpp.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/vec2.cpp.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/vec2.cpp.i
 .PHONY : vec2.cpp.i
 
 vec2.s: vec2.cpp.s
@@ -342,6 +398,7 @@ vec2.s: vec2.cpp.s
 vec2.cpp.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/vec2.cpp.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/vec2.cpp.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/vec2.cpp.s
 .PHONY : vec2.cpp.s
 
 window.o: window.cpp.o
@@ -352,6 +409,7 @@ window.o: window.cpp.o
 window.cpp.o:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.o
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/window.cpp.o
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/window.cpp.o
 .PHONY : window.cpp.o
 
 window.i: window.cpp.i
@@ -362,6 +420,7 @@ window.i: window.cpp.i
 window.cpp.i:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.i
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/window.cpp.i
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/window.cpp.i
 .PHONY : window.cpp.i
 
 window.s: window.cpp.s
@@ -372,6 +431,7 @@ window.s: window.cpp.s
 window.cpp.s:
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.s
 	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/window.cpp.s
+	cd "/Users/Josef/Documents/SS 16/Programmiersprachen/programmiersprachen-aufgabenblatt-2/build" && $(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/window.cpp.s
 .PHONY : window.cpp.s
 
 # Help Target
@@ -384,6 +444,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... example"
 	@echo "... tests"
+	@echo "... analoguhr"
+	@echo "... analoguhr.o"
+	@echo "... analoguhr.i"
+	@echo "... analoguhr.s"
 	@echo "... circle.o"
 	@echo "... circle.i"
 	@echo "... circle.s"

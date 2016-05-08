@@ -26,4 +26,17 @@ target_link_libraries(tests
   glfw
   ${GLFW_LIBRARIES})
 
+# Build analoguhr
+add_executable(analoguhr
+  analoguhr.cpp
+  window.cpp
+  glew.c
+  vec2.cpp
+  mat2.cpp
+  circle.cpp
+  rectangle.cpp)
+target_link_libraries(analoguhr
+  glfw
+  ${GLFW_LIBRARIES})
+
 

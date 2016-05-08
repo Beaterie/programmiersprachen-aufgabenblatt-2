@@ -4,25 +4,28 @@
 
 struct Color{
 
+	//default-Konstruktor
 	Color():
 	r{0},
 	g{0},
 	b{0}
 	{}
 
+	//Konstruktor mit einer Werteingabe
 	Color(float r):
 	r{r}, g{r}, b{r}
-	{
+	{	//Fehlermeldung bei ungültigem Wert
 		if (r > 1 || r < 0){
         	throw std::out_of_range("WARNUNG: Der eingegebene Wert darf nur zwischen 0 und 1 liegen!");
 		}
 	}
 
+	//Konstruktor mit drei Werteingaben
 	Color(float r, float g, float b):
 	r{r},
 	g{g},
 	b{b}
-	{
+	{	//Fehlermeldung bei ungültigen Werten
 		if (r > 1 || r < 0){
 			throw std::out_of_range("WARNUNG: Der Wert für 'r' darf nur zwischen 0 und 1 liegen!");
 		}

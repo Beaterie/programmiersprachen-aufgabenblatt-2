@@ -13,14 +13,11 @@ int main(int argc, char* argv[])
 {
   Window win{std::make_pair(600,600)};
 
-  /* Rectangle peter{Vec2{0.5,0.5}, 0.5, 0.5, Color{}};
-  Circle paul{Vec2{0.3,0.5}, 0.3, Color{0,1,0.3}};
-  Rectangle pan{Vec2{0.4,0.4}, -0.3, -0.3, Color{}};
-  Circle klee{Vec2{0.5,0.5}, 0.2, Color{0,1,0.3}}; */
-
+  //Rechteck
   std::vector<Rectangle> Rechteck;
-  Rechteck.push_back(Rectangle(Vec2{0.5,0.5}, 0.5, 0.5, Color{1,0,0.5}));
+  Rechteck.push_back(Rectangle(Vec2{0.5,0.5}, 0.49, 0.49, Color{1,0,0.5}));
 
+  //Kreis
   std::vector<Circle> Kreis;
   Kreis.push_back(Circle(Vec2{0.3,0.5}, 0.3, Color{0,1,0.3}));
 
@@ -30,13 +27,16 @@ int main(int argc, char* argv[])
       win.close();
     }
 
+    //Mausposition wird überprüft ...
     Vec2 mouse = Vec2(win.mouse_position().first/0.5f,win.mouse_position().second/0.5f);
+    //... beim Rechteck
     if(Rechteck[0].is_inside(mouse)){
         Rechteck[0].draw(win,Color{0,0,1});
     }
     else{
         Rechteck[0].draw(win);    
     }
+    //... beim Kreis
     if(Kreis[0].is_inside(mouse)){
         Kreis[0].draw(win, {0,0,1});
     }
@@ -44,7 +44,9 @@ int main(int argc, char* argv[])
         Kreis[0].draw(win);
     }
 
-    /*
+
+    /*ALTES CODEBEISPIEL:
+
     std::vector<Rectangle> Rechteck;
     Rechteck.push_back(Rectangle(Vec2{0.5,0.5}, 1, 2, Color{1.0,0.5,0.0}));
     

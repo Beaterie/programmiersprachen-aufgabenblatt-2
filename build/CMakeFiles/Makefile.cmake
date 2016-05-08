@@ -68,4 +68,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "external/glfw-3.0.3/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "source/CMakeFiles/example.dir/DependInfo.cmake"
   "source/CMakeFiles/tests.dir/DependInfo.cmake"
+  "source/CMakeFiles/analoguhr.dir/DependInfo.cmake"
   )

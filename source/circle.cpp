@@ -6,14 +6,14 @@
 #include "window.hpp"
 #include "mat2.hpp"
 
-//default
+//default-Konstruktor
 Circle::Circle():
 	ctr{},
 	radius{1},
 	clr{}
 	{}
 
-//alle Eingabeparameter
+//Konstruktor mit allen Eingabeparametern
 Circle::Circle(Vec2 ctr, float radius, Color clr):
 	ctr{ctr},
 	radius{radius},
@@ -46,7 +46,7 @@ float Circle::get_radius() const{
 	return radius;
 }
 
-//Ausgabe des Stützvektors
+//Ausgabe des Stützvektors (Mittelpunkt)
 Vec2 Circle::get_center() const{
 	return ctr;
 }
@@ -64,10 +64,12 @@ float Circle::get_color_b() const{
 	return clr.b;
 }
 
-
+//Kreiszeichnung auf Basis der Kreiswerte
 void Circle::draw(Window const& win){
+	//Mittelpunkt
     win.draw_point(get_center().x, get_center().y, get_color_r(), get_color_g(), get_color_b());
 
+    //360 Außenkanten (Approximation)
     for (int i = 1; i<(360+1); ++i){
         Vec2 start((make_rotation_mat2(2*M_PI*i/360)) * Vec2(get_radius(),0) + get_center());
         Vec2 end((make_rotation_mat2(2*M_PI*(i+1)/360)) * Vec2(get_radius(),0) + get_center());
@@ -75,9 +77,12 @@ void Circle::draw(Window const& win){
     }
 }
 
+//Kreiszeichnung auf Basis der Kreiswerte sowie zusätzlicher Farbangaben
 void Circle::draw(Window const& win, Color const& clr){
+	//Mittelpunkt
     win.draw_point(get_center().x, get_center().y, clr.r, clr.g, clr.b);
 
+    //360 Außenkanten (Approximation)
     for (int i = 1; i<(360+1); ++i){
         Vec2 start((make_rotation_mat2(2*M_PI*i/360)) * Vec2(get_radius(),0) + get_center());
         Vec2 end((make_rotation_mat2(2*M_PI*(i+1)/360)) * Vec2(get_radius(),0) + get_center());
@@ -85,6 +90,7 @@ void Circle::draw(Window const& win, Color const& clr){
     }
 }
 
+//Überprüfung ob eingegebener Punkt im Kreis liegt
 bool Circle::is_inside(Vec2 const& point){
     if(get_radius() >= distance(get_center(),point)){
     	return true;
@@ -92,4 +98,22 @@ bool Circle::is_inside(Vec2 const& point){
     else{
     	return false;
     }
+}
+
+//Zeichnung des Ziffernblattes mit Außenkreis
+void Circle::draw_clock_face(Window const& win){
+	//60 kleine Minuten-Striche
+    for (int i = 1; i<(60+1); ++i){
+        Vec2 start((make_rotation_mat2(2*M_PI*i/60)) * Vec2(get_radius(),0) + get_center());
+        Vec2 end((make_rotation_mat2(2*M_PI*i/60)) * Vec2(get_radius()-0.1,0) + get_center());
+        win.draw_line(start.x, start.y, end.x, end.y, 0.9, 0.9, 0.9);
+    }
+    //12 große 5-Minuten-Striche
+    for (int i = 1; i<(12+1); ++i){
+        Vec2 start((make_rotation_mat2(2*M_PI*i/12)) * Vec2(get_radius(),0) + get_center());
+        Vec2 end((make_rotation_mat2(2*M_PI*i/12)) * Vec2(get_radius()-0.2,0) + get_center());
+        win.draw_line(start.x, start.y, end.x, end.y, 0.8, 0.8, 0.8);
+    }
+   	//Mittelpunkt + 360 Außenkanten (Approximation)
+    draw(win);
 }

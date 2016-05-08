@@ -149,6 +149,19 @@ tests/fast:
 	$(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
+#=============================================================================
+# Target rules for targets named analoguhr
+
+# Build rule for target.
+analoguhr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 analoguhr
+.PHONY : analoguhr
+
+# fast build rule for target.
+analoguhr/fast:
+	$(MAKE) -f source/CMakeFiles/analoguhr.dir/build.make source/CMakeFiles/analoguhr.dir/build
+.PHONY : analoguhr/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,6 +173,7 @@ help:
 	@echo "... glfw"
 	@echo "... example"
 	@echo "... tests"
+	@echo "... analoguhr"
 .PHONY : help
 
 

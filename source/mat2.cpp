@@ -3,7 +3,7 @@
 #include <iostream>
 #include <math.h>
 
-//Standardwerte für Matrix
+//default-Konstruktor
 Mat2::Mat2():
 	a{1},
 	b{0},
@@ -65,7 +65,7 @@ Mat2 transpose(Mat2 const& m){
 	return transposed_matrix;
 }
 
-//Berechnung einer Rotationsmatrix auf Basis des Winkels phi
+//Berechnung einer Rotationsmatrix auf Basis des Winkels 'phi'
 Mat2 make_rotation_mat2(float phi){
 	Mat2 rot(cos(phi), (-1)*sin(phi), sin(phi), cos(phi));
 	return rot;
