@@ -11,7 +11,6 @@ struct Color{
 	{}
 
 	Color(float r):
-	//assert(r >= 0 && r <= 1),
 	r{r}, g{r}, b{r}
 	{
 		if (r > 1 || r < 0){

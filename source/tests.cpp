@@ -249,6 +249,10 @@ TEST_CASE("test_of_rectangle_getter", "r-getter"){
 	eins.set_width(7);
 	REQUIRE(eins.get_height() == Approx(5));
 	REQUIRE(eins.get_width() == Approx(7));
+	eins.set_width(0);
+	REQUIRE(eins.get_width() == Approx(7));
+	eins.set_height(0);
+	REQUIRE(eins.get_height() == Approx(5));
 }
 
 
